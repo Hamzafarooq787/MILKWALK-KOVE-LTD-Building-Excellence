@@ -83,40 +83,61 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary pt-24 pb-16 md:pt-28 md:pb-20">
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary"
+      >
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
             alt="Luxury Architectural Construction"
             fill
-            className="object-cover opacity-40 grayscale-[0.5]"
+            className="object-cover object-center opacity-50"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBXuXhEgfZeT9KjbO2Va1B03SAIbQQnqePg8-ktUd5LQ7yaytdDPUU4RQ-pK3qHGJc_WI4Cp0a1QLZseNWXtbN5pPS6Vc2sPoQhMLYGpmNN2pz-FdhQYTtfHMACMjvk6ht5h-ASNEgVGWvFTDvyexUk2v51yTdHCq-5S9xvc4OspGcDVRrAKw7rZ2gGWEc-QWj8JK36Qbqn98j6wPu-bbaCLlHs9K6wiYFFuYZWva7kl7PMUwX07p9_vknnhYHgMtHNNgBqogATJ0"
             priority
+            sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+          {/* Full dark overlay for mobile readability; fades right only on desktop */}
+          <div className="absolute inset-0 bg-primary/75 md:bg-gradient-to-r md:from-primary md:via-primary/85 md:to-primary/30"></div>
         </div>
-        <div className="relative z-10 max-w-screen-2xl mx-auto px-5 sm:px-6 md:px-8 w-full">
-          <div className="max-w-4xl mx-auto md:mx-0 text-center md:text-left">
-            <span className="inline-block px-3 py-1 mb-5 md:mb-6 border border-secondary text-secondary font-headline font-bold text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase">
-              Est. 2024 • Excellence Defined
+
+        {/* Content */}
+        <div className="relative z-10 w-full max-w-screen-2xl mx-auto px-5 sm:px-8 md:px-10 pt-28 pb-20 sm:pt-32 sm:pb-24 md:pt-36 md:pb-28">
+          <div className="max-w-2xl mx-auto md:mx-0 text-center md:text-left flex flex-col items-center md:items-start gap-6 md:gap-8">
+
+            {/* Badge */}
+            <span className="inline-flex items-center px-3 py-1.5 border border-secondary/70 text-secondary font-headline font-bold text-[10px] tracking-[0.25em] uppercase">
+              Est. 2024 &nbsp;&#8226;&nbsp; Excellence Defined
             </span>
-            <h1 className="text-[2.5rem] leading-[1.1] sm:text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold text-white tracking-tighter mb-5 md:mb-8 text-balance">
-              Building Excellence with <span className="text-secondary">Precision</span> &amp; Trust
+
+            {/* Heading */}
+            <h1 className="font-headline font-extrabold text-white tracking-tight leading-[1.08] text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-balance">
+              Building Excellence<br className="hidden sm:block" /> with{" "}
+              <span className="text-secondary">Precision</span> &amp; Trust
             </h1>
-            <p className="text-base sm:text-lg md:text-2xl text-white/70 font-light max-w-2xl mb-8 md:mb-12 leading-relaxed mx-auto md:mx-0">
-              Premium Construction Services Across the UK. Crafting high-end architectural monuments with engineering mastery.
+
+            {/* Sub-text */}
+            <p className="text-sm sm:text-base md:text-lg text-white/65 font-light leading-relaxed max-w-lg text-pretty">
+              Premium Construction Services Across the UK. Crafting high-end architectural monuments with engineering mastery and uncompromising quality.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center md:items-start">
-              <button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-secondary text-white font-headline font-bold uppercase tracking-widest text-xs sm:text-sm hover:scale-105 transition-transform duration-500 shadow-xl shadow-black/40">
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto pt-2">
+              <button className="w-full sm:w-auto px-8 py-4 bg-secondary text-white font-headline font-bold uppercase tracking-widest text-xs hover:opacity-90 active:scale-95 transition-all duration-300 shadow-lg shadow-black/30">
                 Request a Quote
               </button>
-              <button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 border border-white/20 text-white font-headline font-bold uppercase tracking-widest text-xs sm:text-sm hover:bg-white hover:text-primary transition-all duration-500">
+              <button className="w-full sm:w-auto px-8 py-4 border border-white/30 text-white font-headline font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-primary active:scale-95 transition-all duration-300">
                 Contact Us
               </button>
             </div>
+
           </div>
         </div>
-        <div className="hidden lg:block absolute right-12 bottom-24 rotate-90 origin-right">
-          <span className="font-headline font-bold text-secondary text-xs tracking-[0.5em] uppercase whitespace-nowrap opacity-50">
+
+        {/* Decorative vertical text — desktop only */}
+        <div className="hidden lg:flex absolute right-10 bottom-20 items-end gap-2">
+          <div className="w-px h-16 bg-secondary/40"></div>
+          <span className="text-vertical font-headline font-bold text-secondary/40 text-[10px] tracking-[0.4em] uppercase">
             Structural Integrity &amp; Aesthetic Brilliance
           </span>
         </div>

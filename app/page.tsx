@@ -284,11 +284,11 @@ export default function Home() {
             Why Choose Us
           </span>
           <div className="max-w-2xl mb-12 md:mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-headline font-extrabold tracking-tighter mb-6 text-balance">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-headline font-extrabold tracking-tighter mb-6 text-balance">
               Why the Industry Trusts{" "}
               <span className="text-secondary">Milkwalk Kove</span>
             </h2>
-            <p className="text-on-primary-container text-base md:text-lg font-light">
+            <p className="text-on-primary-container text-sm sm:text-base md:text-lg font-light">
               We don&apos;t just build structures; we build trust through
               technical mastery and uncompromising standards.
             </p>
@@ -303,7 +303,7 @@ export default function Home() {
                 <span className="material-symbols-outlined text-secondary text-4xl sm:text-5xl">
                   {f.icon}
                 </span>
-                <h4 className="text-xl sm:text-2xl font-headline font-bold tracking-tight">
+                <h4 className="text-base sm:text-lg md:text-xl font-headline font-bold tracking-tight">
                   {f.title}
                 </h4>
                 <p className="text-on-primary-container leading-relaxed font-light text-sm sm:text-base">
@@ -328,11 +328,11 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 text-center">
             {statsData.map((stat, idx) => (
               <div key={stat.label}>
-                <div className="text-4xl sm:text-5xl md:text-6xl font-headline font-black text-secondary">
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-headline font-black text-secondary">
                   {counters[idx]}
                   {stat.suffix}
                 </div>
-                <p className="text-on-surface-variant font-medium uppercase tracking-wide mt-3 text-xs sm:text-sm">
+                <p className="text-on-surface-variant font-medium uppercase tracking-wide mt-2 text-xs sm:text-sm">
                   {stat.label}
                 </p>
               </div>
@@ -346,11 +346,11 @@ export default function Home() {
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
           {/* Left column */}
           <div className="text-white">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-headline font-extrabold tracking-tighter mb-6 text-balance">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-headline font-extrabold tracking-tighter mb-6 text-balance">
               Let&apos;s Build the{" "}
               <span className="text-secondary">Future</span> Together
             </h2>
-            <p className="text-on-primary-container text-base md:text-lg font-light mb-10">
+            <p className="text-on-primary-container text-sm sm:text-base md:text-lg font-light mb-10">
               Submit your project specifications, and our technical estimators
               will provide a comprehensive quote within 48 hours.
             </p>

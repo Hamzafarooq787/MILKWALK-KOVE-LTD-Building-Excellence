@@ -20,10 +20,10 @@ export default function AboutPage() {
             <span className="inline-block text-secondary font-headline font-bold tracking-[0.3em] uppercase text-sm mb-6">
               Established Precision
             </span>
-            <h1 className="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter leading-[0.9] mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-headline font-extrabold tracking-tighter leading-[0.9] mb-8">
               CONSTRUCTING <br /> THE FUTURE.
             </h1>
-            <p className="text-lg md:text-xl text-on-primary-container max-w-2xl font-light leading-relaxed opacity-90">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-on-primary-container max-w-2xl font-light leading-relaxed opacity-90">
               MILKWALK KOVE LTD is a bespoke civil engineering and construction
               firm dedicated to the art of structural integrity and high-end
               architectural finish.
@@ -32,15 +32,15 @@ export default function AboutPage() {
           <div className="lg:col-span-4 hidden lg:block">
             <div className="border-l border-white/20 pl-8 space-y-8">
               <div>
-                <div className="text-3xl font-headline font-bold text-secondary">25+</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-headline font-bold text-secondary">25+</div>
                 <div className="text-xs uppercase tracking-widest opacity-60">Years of Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-headline font-bold text-secondary">142</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-headline font-bold text-secondary">142</div>
                 <div className="text-xs uppercase tracking-widest opacity-60">Iconic Structures</div>
               </div>
               <div>
-                <div className="text-3xl font-headline font-bold text-secondary">08</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-headline font-bold text-secondary">08</div>
                 <div className="text-xs uppercase tracking-widest opacity-60">Global Awards</div>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="lg:pt-24">
-            <h2 className="text-4xl font-headline font-extrabold text-primary mb-12">Core Principles</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold text-primary mb-12">Core Principles</h2>
             <div className="space-y-12">
               {[
                 {
@@ -93,11 +93,11 @@ export default function AboutPage() {
                 },
               ].map((item) => (
                 <div key={item.num} className="flex gap-8 group">
-                  <div className="text-secondary font-headline font-black text-4xl opacity-20 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="text-secondary font-headline font-black text-2xl sm:text-3xl md:text-4xl opacity-20 group-hover:opacity-100 transition-opacity duration-500">
                     {item.num}
                   </div>
                   <div>
-                    <h4 className="font-headline font-bold text-xl mb-3 text-primary uppercase tracking-tight">
+                    <h4 className="font-headline font-bold text-base sm:text-lg md:text-xl mb-3 text-primary uppercase tracking-tight">
                       {item.title}
                     </h4>
                     <p className="text-on-surface-variant font-body">{item.desc}</p>
@@ -117,7 +117,7 @@ export default function AboutPage() {
               <span className="text-secondary font-headline font-bold tracking-[0.3em] uppercase text-xs mb-4 block">
                 Chronicle
               </span>
-              <h2 className="text-4xl md:text-5xl font-headline font-extrabold text-primary tracking-tighter">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-headline font-extrabold text-primary tracking-tighter">
                 TIMELINE OF EXCELLENCE
               </h2>
             </div>
@@ -137,8 +137,8 @@ export default function AboutPage() {
                 key={item.year}
                 className={`flex-1 bg-surface-container-lowest p-8 md:p-10 border-l-4 border-secondary shadow-sm ${item.mt}`}
               >
-                <div className="text-secondary font-headline font-black text-3xl mb-4">{item.year}</div>
-                <h5 className="font-headline font-bold text-lg mb-4 text-primary">{item.title}</h5>
+                <div className="text-secondary font-headline font-black text-xl sm:text-2xl md:text-3xl mb-4">{item.year}</div>
+                <h5 className="font-headline font-bold text-base sm:text-lg mb-4 text-primary">{item.title}</h5>
                 <p className="text-on-surface-variant text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -149,7 +149,7 @@ export default function AboutPage() {
       {/* Professional Team */}
       <section className="py-24 md:py-32 px-6 md:px-8 max-w-screen-2xl mx-auto">
         <div className="text-center mb-16 md:mb-24">
-          <h2 className="text-4xl md:text-5xl font-headline font-extrabold text-primary tracking-tighter mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-headline font-extrabold text-primary tracking-tighter mb-4">
             THE ARCHITECTS OF SUCCESS
           </h2>
           <p className="text-on-surface-variant max-w-2xl mx-auto">
@@ -207,10 +207,10 @@ export default function AboutPage() {
       {/* Final CTA */}
       <section className="bg-gradient-to-br from-[#0b3027] to-[#001a13] py-24 md:py-32 px-6 md:px-8 text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-headline font-extrabold text-white tracking-tighter mb-8 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-headline font-extrabold text-white tracking-tighter mb-8 leading-tight">
             READY TO BUILD YOUR LEGACY?
           </h2>
-          <p className="text-on-primary-container text-lg mb-12 font-light">
+          <p className="text-on-primary-container text-sm sm:text-base md:text-lg mb-12 font-light">
             Partner with the leaders in architectural construction and civil engineering.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">

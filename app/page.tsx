@@ -83,32 +83,33 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary pt-20 md:pt-24 pb-20">
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary pt-24 pb-16 md:pt-28 md:pb-20">
         <div className="absolute inset-0 z-0">
           <Image
             alt="Luxury Architectural Construction"
             fill
             className="object-cover opacity-40 grayscale-[0.5]"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBXuXhEgfZeT9KjbO2Va1B03SAIbQQnqePg8-ktUd5LQ7yaytdDPUU4RQ-pK3qHGJc_WI4Cp0a1QLZseNWXtbN5pPS6Vc2sPoQhMLYGpmNN2pz-FdhQYTtfHMACMjvk6ht5h-ASNEgVGWvFTDvyexUk2v51yTdHCq-5S9xvc4OspGcDVRrAKw7rZ2gGWEc-QWj8JK36Qbqn98j6wPu-bbaCLlHs9K6wiYFFuYZWva7kl7PMUwX07p9_vknnhYHgMtHNNgBqogATJ0"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
         </div>
-        <div className="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-8 w-full">
-          <div className="max-w-4xl mx-auto md:mx-0">
-            <span className="inline-block px-4 py-1 mb-6 border border-secondary text-secondary font-headline font-bold text-xs tracking-[0.3em] uppercase">
+        <div className="relative z-10 max-w-screen-2xl mx-auto px-5 sm:px-6 md:px-8 w-full">
+          <div className="max-w-4xl mx-auto md:mx-0 text-center md:text-left">
+            <span className="inline-block px-3 py-1 mb-5 md:mb-6 border border-secondary text-secondary font-headline font-bold text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase">
               Est. 2024 • Excellence Defined
             </span>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold text-white leading-[1.1] tracking-tighter mb-8">
+            <h1 className="text-[2.5rem] leading-[1.1] sm:text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold text-white tracking-tighter mb-5 md:mb-8 text-balance">
               Building Excellence with <span className="text-secondary">Precision</span> &amp; Trust
             </h1>
-            <p className="text-xl md:text-2xl text-white/70 font-light max-w-2xl mb-12 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-2xl text-white/70 font-light max-w-2xl mb-8 md:mb-12 leading-relaxed mx-auto md:mx-0">
               Premium Construction Services Across the UK. Crafting high-end architectural monuments with engineering mastery.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6">
-              <button className="px-10 py-5 bg-secondary text-white font-headline font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform duration-500 shadow-xl shadow-black/40">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center md:items-start">
+              <button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-secondary text-white font-headline font-bold uppercase tracking-widest text-xs sm:text-sm hover:scale-105 transition-transform duration-500 shadow-xl shadow-black/40">
                 Request a Quote
               </button>
-              <button className="px-10 py-5 border border-white/20 text-white font-headline font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-primary transition-all duration-500">
+              <button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 border border-white/20 text-white font-headline font-bold uppercase tracking-widest text-xs sm:text-sm hover:bg-white hover:text-primary transition-all duration-500">
                 Contact Us
               </button>
             </div>

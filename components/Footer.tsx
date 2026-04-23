@@ -1,5 +1,5 @@
 const Footer = () => {
-  const footerLinks = ["Home", "About Us", "Services", "Portfolio", "Contact Us", "Privacy Policy"];
+  const footerLinks = ["Home", "About Us", "Services", "Portfolio", "Contact Us"];
 
   return (
     <footer className="w-full border-t border-white/5 bg-[#0B3027]">
@@ -38,6 +38,22 @@ const Footer = () => {
             <span className="material-symbols-outlined text-lg">public</span>
           </a>
         </div>
+      </div>
+      <div className="border-t border-white/5 px-6 md:px-12 py-4 w-full max-w-screen-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p className="font-body text-xs text-white/30 tracking-wide">
+          All Rights Reserved &copy; 2024 MILKWALK KOVE LTD
+        </p>
+        <p className="font-body text-xs text-white/30 tracking-wide">
+          Designed By{" "}
+          <a
+            href="https://linkedo.co.uk/"
+            target="_blank"
+            rel="nofollow noreferrer"
+            className="text-secondary hover:opacity-80 transition-opacity duration-300"
+          >
+            Linkedo
+          </a>
+        </p>
       </div>
     </footer>
   );

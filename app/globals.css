@@ -2,6 +2,7 @@
 
 /* ---------- Custom theme (Tailwind v4 CSS-first) ---------- */
 @theme {
+  --breakpoint-xs: 390px;
   --color-primary-fixed: #c4ebdd;
   --color-on-tertiary-container: #a98e56;
   --color-on-primary-fixed-variant: #2b4d43;

@@ -61,11 +61,11 @@ export default function ServicesPage() {
             <span className="text-secondary font-headline text-sm font-bold tracking-[0.3em] uppercase mb-6 block">
               Precision Engineering
             </span>
-            <h1 className="text-white font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.9] mb-8">
+            <h1 className="text-white font-headline text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tighter leading-[0.9] mb-8">
               OUR CORE <br />
               <span className="text-secondary">CAPABILITIES</span>
             </h1>
-            <p className="text-white/60 text-lg md:text-xl max-w-xl font-light leading-relaxed">
+            <p className="text-white/60 text-sm sm:text-base md:text-lg lg:text-xl max-w-xl font-light leading-relaxed">
               From foundational structural integrity to high-end architectural
               finishing, we deliver monolithic excellence across every tier of
               construction.
@@ -97,7 +97,7 @@ export default function ServicesPage() {
                   </div>
                 </div>
                 <div className="p-8 md:p-10">
-                  <h3 className="font-headline text-2xl md:text-3xl font-bold text-primary mb-4 tracking-tight">
+                  <h3 className="font-headline text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-4 tracking-tight">
                     {service.title}
                   </h3>
                   <p className="text-on-surface-variant leading-relaxed mb-6">
@@ -123,25 +123,25 @@ export default function ServicesPage() {
       <section className="py-20 bg-primary-container text-white">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-8 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           <div className="space-y-2">
-            <span className="block text-secondary font-headline text-4xl font-black">500+</span>
+            <span className="block text-secondary font-headline text-2xl sm:text-3xl md:text-4xl font-black">500+</span>
             <span className="block text-on-primary-container font-label text-xs uppercase tracking-widest">
               Projects Completed
             </span>
           </div>
           <div className="space-y-2">
-            <span className="block text-secondary font-headline text-4xl font-black">15+</span>
+            <span className="block text-secondary font-headline text-2xl sm:text-3xl md:text-4xl font-black">15+</span>
             <span className="block text-on-primary-container font-label text-xs uppercase tracking-widest">
               Years Experience
             </span>
           </div>
           <div className="space-y-2">
-            <span className="block text-secondary font-headline text-4xl font-black">28</span>
+            <span className="block text-secondary font-headline text-2xl sm:text-3xl md:text-4xl font-black">28</span>
             <span className="block text-on-primary-container font-label text-xs uppercase tracking-widest">
               Global Awards
             </span>
           </div>
           <div className="space-y-2">
-            <span className="block text-secondary font-headline text-4xl font-black">100%</span>
+            <span className="block text-secondary font-headline text-2xl sm:text-3xl md:text-4xl font-black">100%</span>
             <span className="block text-on-primary-container font-label text-xs uppercase tracking-widest">
               Safety Rating
             </span>
@@ -152,10 +152,10 @@ export default function ServicesPage() {
       {/* CTA Section – same content */}
       <section className="py-32 bg-surface-container-low text-center px-6 md:px-8">
         <div className="max-w-2xl mx-auto">
-          <h2 className="font-headline text-4xl font-bold text-primary mb-6 tracking-tight">
+          <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6 tracking-tight">
             Ready to Build Your Legacy?
           </h2>
-          <p className="text-on-surface-variant mb-10 leading-relaxed">
+          <p className="text-on-surface-variant text-sm sm:text-base mb-10 leading-relaxed">
             Consult with our lead architects and engineers to bring your vision to
             life with MilkWalk Kove's signature precision.
           </p>

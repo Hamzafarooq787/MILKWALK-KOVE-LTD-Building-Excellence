@@ -11,13 +11,13 @@ export default function ProjectsPage() {
           <h2 className="font-headline text-secondary text-sm font-bold tracking-[0.3em] uppercase mb-4">
             Portfolio
           </h2>
-          <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-none text-primary">
+          <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tighter leading-none text-primary">
             Architectural <br />{" "}
             <span className="text-secondary italic font-light">Excellence.</span>
           </h1>
         </div>
         <div className="lg:col-span-5 pb-2">
-          <p className="font-body text-on-surface-variant text-lg leading-relaxed max-w-md">
+          <p className="font-body text-on-surface-variant text-sm sm:text-base md:text-lg leading-relaxed max-w-md">
             Explore our curated gallery of residential, commercial, and industrial
             milestones. Where engineering precision meets luxury design.
           </p>
@@ -170,25 +170,25 @@ export default function ProjectsPage() {
         </div>
         <div className="max-w-screen-2xl mx-auto relative z-10 grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-center lg:text-left">
           <div>
-            <h5 className="text-secondary font-headline text-3xl md:text-5xl font-extrabold mb-2">124+</h5>
+            <h5 className="text-secondary font-headline text-xl sm:text-2xl md:text-3xl lg:text-5xl font-extrabold mb-2">124+</h5>
             <p className="text-white/40 font-headline text-[10px] md:text-xs uppercase tracking-[0.3em]">
               Completed Assets
             </p>
           </div>
           <div>
-            <h5 className="text-secondary font-headline text-3xl md:text-5xl font-extrabold mb-2">£850M</h5>
+            <h5 className="text-secondary font-headline text-xl sm:text-2xl md:text-3xl lg:text-5xl font-extrabold mb-2">£850M</h5>
             <p className="text-white/40 font-headline text-[10px] md:text-xs uppercase tracking-[0.3em]">
               Portfolio Value
             </p>
           </div>
           <div>
-            <h5 className="text-secondary font-headline text-3xl md:text-5xl font-extrabold mb-2">15</h5>
+            <h5 className="text-secondary font-headline text-xl sm:text-2xl md:text-3xl lg:text-5xl font-extrabold mb-2">15</h5>
             <p className="text-white/40 font-headline text-[10px] md:text-xs uppercase tracking-[0.3em]">
               Design Awards
             </p>
           </div>
           <div>
-            <h5 className="text-secondary font-headline text-3xl md:text-5xl font-extrabold mb-2">12</h5>
+            <h5 className="text-secondary font-headline text-xl sm:text-2xl md:text-3xl lg:text-5xl font-extrabold mb-2">12</h5>
             <p className="text-white/40 font-headline text-[10px] md:text-xs uppercase tracking-[0.3em]">
               Years Of Precision
             </p>
@@ -198,10 +198,10 @@ export default function ProjectsPage() {
 
       {/* Call to Action */}
       <section className="px-6 md:px-8 py-20 md:py-32 max-w-screen-xl mx-auto text-center">
-        <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter text-primary mb-6 md:mb-8">
+        <h2 className="font-headline text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold tracking-tighter text-primary mb-6 md:mb-8">
           Ready to Build Your <span className="text-secondary italic font-light">Legacy?</span>
         </h2>
-        <p className="font-body text-on-surface-variant max-w-2xl mx-auto mb-8 md:mb-12 text-base md:text-lg">
+        <p className="font-body text-on-surface-variant max-w-2xl mx-auto mb-8 md:mb-12 text-sm sm:text-base md:text-lg">
           Our team is ready to provide the technical expertise and architectural
           vision your next luxury development deserves.
         </p>

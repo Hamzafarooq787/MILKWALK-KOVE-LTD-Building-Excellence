@@ -1,12 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close menu on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
 
   const navItems = [
     { name: "Home", href: "/", hash: "#home" },
@@ -17,9 +29,7 @@ const Navbar = () => {
   ];
 
   const getLinkHref = (item: (typeof navItems)[0]) => {
-    if (item.hash && pathname !== "/") {
-      return item.href + item.hash;
-    }
+    if (item.hash && pathname !== "/") return item.href + item.hash;
     if (item.hash) return item.hash;
     return item.href;
   };
@@ -31,60 +41,93 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#0B3027]/90 backdrop-blur-xl shadow-2xl shadow-black/20">
-      <div className="flex justify-between items-center w-full px-6 md:px-8 py-4 md:py-5 max-w-screen-2xl mx-auto">
-        <Link href="/" className="text-xl md:text-2xl font-black tracking-tighter text-white">
-          MILKWALK KOVE LTD
-        </Link>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6 lg:gap-8">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={getLinkHref(item)}
-              className={`font-headline tracking-tight text-sm font-semibold uppercase transition-all duration-700 ${
-                isActive(item)
-                  ? "text-secondary border-b-2 border-secondary pb-1"
-                  : "text-white/80 hover:text-secondary"
-              }`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-
-        <div className="flex items-center gap-4">
-          <button className="hidden md:flex items-center gap-2 px-6 py-2 bg-secondary text-white font-headline text-xs font-bold uppercase tracking-widest hover:bg-on-secondary-container transition-colors duration-500 rounded-lg">
-            WhatsApp Chat
-            <span className="material-symbols-outlined text-sm">chat</span>
-          </button>
-          <button
-            className="md:hidden text-white"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-[#0B3027]/95 shadow-2xl shadow-black/30"
+            : "bg-[#0B3027]/90"
+        } backdrop-blur-xl`}
+      >
+        <div className="flex justify-between items-center w-full px-4 sm:px-6 md:px-8 py-3.5 md:py-5 max-w-screen-2xl mx-auto">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="text-base sm:text-lg md:text-2xl font-black tracking-tighter text-white shrink-0 leading-tight"
+            onClick={() => setMobileMenuOpen(false)}
           >
-            <span className="material-symbols-outlined">menu</span>
-          </button>
-        </div>
-      </div>
+            MILKWALK KOVE LTD
+          </Link>
 
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-primary-container/95 backdrop-blur-lg py-4 px-6 flex flex-col gap-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={getLinkHref(item)}
-              className="text-white/90 font-headline text-sm uppercase tracking-wide hover:text-secondary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={getLinkHref(item)}
+                className={`font-headline tracking-tight text-sm font-semibold uppercase transition-all duration-300 ${
+                  isActive(item)
+                    ? "text-secondary border-b-2 border-secondary pb-1"
+                    : "text-white/80 hover:text-secondary"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-3">
+            <button className="hidden md:flex items-center gap-2 px-5 py-2 bg-secondary text-white font-headline text-xs font-bold uppercase tracking-widest hover:bg-on-secondary-container transition-colors duration-300 rounded-lg">
+              WhatsApp Chat
+              <span className="material-symbols-outlined text-sm">chat</span>
+            </button>
+
+            {/* Hamburger Button */}
+            <button
+              className="md:hidden flex items-center justify-center w-10 h-10 text-white rounded-md hover:bg-white/10 transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
             >
-              {item.name}
-            </Link>
-          ))}
+              <span className="material-symbols-outlined text-2xl">
+                {mobileMenuOpen ? "close" : "menu"}
+              </span>
+            </button>
+          </div>
         </div>
-      )}
-    </nav>
+
+        {/* Mobile Menu — slides down */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="bg-[#0B3027]/98 backdrop-blur-lg border-t border-white/10 px-4 py-4 flex flex-col gap-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={getLinkHref(item)}
+                className={`px-4 py-3 rounded-md font-headline text-sm uppercase tracking-wide font-semibold transition-colors ${
+                  isActive(item)
+                    ? "text-secondary bg-white/5"
+                    : "text-white/85 hover:text-secondary hover:bg-white/5"
+                }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            {/* WhatsApp CTA in mobile menu */}
+            <div className="pt-3 mt-2 border-t border-white/10">
+              <button className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-secondary text-white font-headline text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-on-secondary-container transition-colors">
+                WhatsApp Chat
+                <span className="material-symbols-outlined text-sm">chat</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 };
 

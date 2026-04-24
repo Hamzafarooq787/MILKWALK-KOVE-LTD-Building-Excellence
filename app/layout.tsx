@@ -11,6 +11,30 @@ export const metadata: Metadata = {
     icon: "/icon.png",
     apple: "/icon.png",
   },
+  openGraph: {
+    title: "MILKWALK KOVE LTD | Building Excellence",
+    description:
+      "Premium Construction Services Across the UK. Building Tomorrow. Delivering Excellence.",
+    url: "https://www.milkwalkkove.co.uk",
+    siteName: "Milkwalk Kove Ltd",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Milkwalk Kove Ltd – Building Tomorrow. Delivering Excellence.",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MILKWALK KOVE LTD | Building Excellence",
+    description:
+      "Premium Construction Services Across the UK. Building Tomorrow. Delivering Excellence.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({

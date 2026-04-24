@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Footer = () => {
   const footerLinks = ["Home", "About Us", "Services", "Portfolio", "Contact Us"];
 
@@ -5,9 +7,13 @@ const Footer = () => {
     <footer className="w-full border-t border-white/5 bg-[#0B3027]">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-6 md:px-12 py-12 md:py-16 gap-8 w-full max-w-screen-2xl mx-auto">
         <div className="flex flex-col gap-4">
-          <div className="font-headline font-bold text-secondary text-2xl">
-            MILKWALK KOVE LTD
-          </div>
+          <Image
+            src="/images/milkwalk-logo.png"
+            alt="Milkwalk Kove Ltd"
+            width={160}
+            height={80}
+            className="h-16 w-auto object-contain"
+          />
           <p className="font-body text-xs tracking-wide leading-relaxed text-white/60 max-w-sm">
             © 2024 MILKWALK KOVE LTD. 29 STANLEY STREET ST6 6BX.
             sales@milkwalkkove.com | dusan.dirda@milkwalkkove.com

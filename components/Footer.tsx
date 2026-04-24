@@ -16,7 +16,7 @@ const Footer = () => {
           />
           <p className="font-body text-xs tracking-wide leading-relaxed text-white/60 max-w-sm">
             © 2024 MILKWALK KOVE LTD. 29 STANLEY STREET ST6 6BX.
-            sales@milkwalkkove.com | dusan.dirda@milkwalkkove.com
+            sales@milkwalkkove.co.uk
           </p>
         </div>
         <div className="flex flex-wrap gap-6 md:gap-8">

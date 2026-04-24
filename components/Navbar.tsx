@@ -85,10 +85,13 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-3">
-            <button className="hidden md:flex items-center gap-2 px-5 py-2 bg-secondary text-white font-headline text-xs font-bold uppercase tracking-widest hover:bg-on-secondary-container transition-colors duration-300 rounded-lg">
-              WhatsApp Chat
-              <span className="material-symbols-outlined text-sm">chat</span>
-            </button>
+            <Link
+              href="/contact"
+              className="hidden md:flex items-center gap-2 px-5 py-2 bg-secondary text-white font-headline text-xs font-bold uppercase tracking-widest hover:bg-on-secondary-container transition-colors duration-300 rounded-lg"
+            >
+              Get a Quote
+              <span className="material-symbols-outlined text-sm">request_quote</span>
+            </Link>
 
             {/* Hamburger Button */}
             <button
@@ -125,12 +128,16 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            {/* WhatsApp CTA in mobile menu */}
+            {/* Get a Quote CTA in mobile menu */}
             <div className="pt-3 mt-2 border-t border-white/10">
-              <button className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-secondary text-white font-headline text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-on-secondary-container transition-colors">
-                WhatsApp Chat
-                <span className="material-symbols-outlined text-sm">chat</span>
-              </button>
+              <Link
+                href="/contact"
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-secondary text-white font-headline text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-on-secondary-container transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Get a Quote
+                <span className="material-symbols-outlined text-sm">request_quote</span>
+              </Link>
             </div>
           </div>
         </div>

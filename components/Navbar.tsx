@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -53,10 +54,17 @@ const Navbar = () => {
           {/* Logo */}
           <Link
             href="/"
-            className="text-base sm:text-lg md:text-2xl font-black tracking-tighter text-white shrink-0 leading-tight"
+            className="shrink-0"
             onClick={() => setMobileMenuOpen(false)}
           >
-            MILKWALK KOVE LTD
+            <Image
+              src="/images/milkwalk-logo.png"
+              alt="Milkwalk Kove Ltd"
+              width={120}
+              height={60}
+              className="h-10 md:h-12 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

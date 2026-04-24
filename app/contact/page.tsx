@@ -119,26 +119,10 @@ export default function ContactPage() {
                           General Inquiries
                         </p>
                         <a
-                          href="mailto:sales@milkwalkkove.com"
+                          href="mailto:sales@milkwalkkove.co.uk"
                           className="text-xl font-headline font-light hover:text-secondary transition-colors tracking-tight"
                         >
-                          sales@milkwalkkove.com
-                        </a>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <span className="material-symbols-outlined text-secondary">
-                        person
-                      </span>
-                      <div>
-                        <p className="text-xs text-on-primary-container uppercase font-bold tracking-widest mb-1">
-                          Executive Office
-                        </p>
-                        <a
-                          href="mailto:dusan.dirda@milkwalkkove.com"
-                          className="text-xl font-headline font-light hover:text-secondary transition-colors tracking-tight"
-                        >
-                          dusan.dirda@milkwalkkove.com
+                          sales@milkwalkkove.co.uk
                         </a>
                       </div>
                     </div>

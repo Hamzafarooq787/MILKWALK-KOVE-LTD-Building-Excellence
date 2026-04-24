@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "MILKWALK KOVE LTD | Building Excellence",
   description:
     "Premium Construction Services Across the UK. Crafting high-end architectural monuments with engineering mastery.",
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({

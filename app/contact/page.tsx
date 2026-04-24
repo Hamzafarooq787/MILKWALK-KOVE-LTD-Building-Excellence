@@ -2,8 +2,43 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState, FormEvent } from "react";
 
 export default function ContactPage() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    brief: "",
+  });
+
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  }
+
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const to = "sales@milkwalkkove.co.uk";
+    const subject = encodeURIComponent(
+      `Quotation Request from ${form.name || "Prospective Client"}`
+    );
+    const body = encodeURIComponent(
+      `QUOTATION REQUEST – MILKWALK KOVE LTD\n` +
+        `${"=".repeat(40)}\n\n` +
+        `Full Name:      ${form.name}\n` +
+        `Email:          ${form.email}\n` +
+        `Phone:          ${form.phone}\n\n` +
+        `Project Brief:\n${form.brief}\n\n` +
+        `${"=".repeat(40)}\n` +
+        `Sent via www.milkwalkkove.co.uk`
+    );
+
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  }
+
   return (
     <>
       {/* Hero Section */}
@@ -48,7 +83,7 @@ export default function ContactPage() {
               <h2 className="font-headline text-3xl font-bold tracking-tight text-primary mb-12">
                 Project Inquiry
               </h2>
-              <form className="space-y-10">
+              <form className="space-y-10" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <div className="relative">
                     <label className="block font-label text-[10px] font-bold uppercase tracking-widest text-outline mb-2">
@@ -56,6 +91,10 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="text"
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
+                      required
                       className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 focus:ring-0 focus:border-secondary transition-all font-body text-primary placeholder:text-outline-variant/50"
                       placeholder="Engineering Lead / Client"
                     />
@@ -66,6 +105,10 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      required
                       className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 focus:ring-0 focus:border-secondary transition-all font-body text-primary placeholder:text-outline-variant/50"
                       placeholder="name@company.com"
                     />
@@ -77,6 +120,9 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="tel"
+                    name="phone"
+                    value={form.phone}
+                    onChange={handleChange}
                     className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 focus:ring-0 focus:border-secondary transition-all font-body text-primary placeholder:text-outline-variant/50"
                     placeholder="+44 (0) 0000 000 000"
                   />
@@ -87,13 +133,20 @@ export default function ContactPage() {
                   </label>
                   <textarea
                     rows={4}
+                    name="brief"
+                    value={form.brief}
+                    onChange={handleChange}
+                    required
                     className="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 focus:ring-0 focus:border-secondary transition-all font-body text-primary placeholder:text-outline-variant/50 resize-none"
                     placeholder="Outline your vision, technical requirements, and timeline..."
                   ></textarea>
                 </div>
                 <div className="pt-6">
-                  <button className="group flex items-center gap-4 bg-primary text-white px-10 py-5 font-headline text-xs font-bold uppercase tracking-[0.2em] hover:bg-secondary transition-all duration-500">
-                    Send Inquiry
+                  <button
+                    type="submit"
+                    className="group flex items-center gap-4 bg-primary text-white px-10 py-5 font-headline text-xs font-bold uppercase tracking-[0.2em] hover:bg-secondary transition-all duration-500"
+                  >
+                    Request Quotation
                     <span className="material-symbols-outlined text-sm group-hover:translate-x-2 transition-transform">
                       arrow_forward
                     </span>
